@@ -60,3 +60,14 @@ You have two options on how to configure your desired keymap:
 #### I'm getting File Transfer Error after copying firmware to the keyboard
 
 It's OK. Proof: https://zmk.dev/docs/troubleshooting#file-transfer-error
+
+---
+
+Pull submodules.
+```bash
+git submodule update --init --recursive
+```
+
+```bash
+git submodule update --remote --merge
+```
