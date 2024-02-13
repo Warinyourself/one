@@ -9,24 +9,25 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define SYM 4
 
-ZMK_UNICODE_SINGLE(el_prod,   N0, N0,  D, N7) // ×
-ZMK_UNICODE_SINGLE(dotdotdot, N2, N0, N2, N6) // …
-ZMK_UNICODE_PAIR(hard_sign,   N0, N4, N4,  A,   N0, N4, N2,  A) // Cyrillic Small Letter Hard Sign ъ
-ZMK_UNICODE_PAIR(io,          N0, N4, N5, N1,   N0, N4, N0, N1) // Cyrillic Small Letter Io ё
-ZMK_UNICODE_PAIR(shcha,       N0, N4, N4, N9,   N0, N4, N2, N9) // Cyrillic Capital Letter Shcha щ
+ZMK_UNICODE_SINGLE(el_prod,        N0, N0,  D, N7) // ×
+ZMK_UNICODE_SINGLE(dotdotdot,      N2, N0, N2, N6) // …
+ZMK_UNICODE_PAIR(hard_sign,        N0, N4, N4,  A,  N0, N4, N2,  A) // Cyrillic Small Letter Hard Sign ъ
+ZMK_UNICODE_PAIR(io,               N0, N4, N5, N1,  N0, N4, N0, N1) // Cyrillic Small Letter Io ё
+ZMK_UNICODE_PAIR(shcha,            N0, N4, N4, N9,  N0, N4, N2, N9) // Cyrillic Capital Letter Shcha щ
 ZMK_UNICODE_SINGLE(orthodox_cross, N2, N6, N2, N6) // Orthodox Cross ☦
-ZMK_UNICODE_SINGLE(laquo, N0, N0,  A,  B) // Left-Pointing Double Angle Quotation Mark «
-ZMK_UNICODE_SINGLE(raquo, N0, N0,  B,  B) // Right-Pointing Double Angle Quotation Mark »
-ZMK_UNICODE_SINGLE(ruble_sign,  N2, N0,  B,  D) // Russian Ruble ₽
-ZMK_UNICODE_SINGLE(yen_sign,    N0, N0,  A, N5) // Yen Sign ¥
-ZMK_UNICODE_SINGLE(pound_sign,  N0, N0,  A, N3) // Pound Sign £
-ZMK_UNICODE_SINGLE(euro_sign,   N0, N0,  E, N9) // Euro €
-ZMK_UNICODE_SINGLE(sect_sign,  N0, N0,  A, N7) // Section Sign §
-ZMK_UNICODE_SINGLE(reg_sign,   N0, N0,  A,  E) // Registered Sign ®
-ZMK_UNICODE_SINGLE(copy_sign,  N0, N0,  A, N9) // Copyright Sign ©
-ZMK_UNICODE_SINGLE(ring_sign,  N0, N2,  D,  A) // Ring Above ˚
-ZMK_UNICODE_SINGLE(sqrt_sign,  N2, N2, N1,  A) // Square root √
+ZMK_UNICODE_SINGLE(laquo,          N0, N0,  A,  B) // Left-Pointing Double Angle Quotation Mark «
+ZMK_UNICODE_SINGLE(raquo,          N0, N0,  B,  B) // Right-Pointing Double Angle Quotation Mark »
+ZMK_UNICODE_SINGLE(ruble_sign,     N2, N0,  B,  D) // Russian Ruble ₽
+ZMK_UNICODE_SINGLE(yen_sign,       N0, N0,  A, N5) // Yen Sign ¥
+ZMK_UNICODE_SINGLE(pound_sign,     N0, N0,  A, N3) // Pound Sign £
+ZMK_UNICODE_SINGLE(euro_sign,      N0, N0,  E, N9) // Euro €
+ZMK_UNICODE_SINGLE(sect_sign,      N0, N0,  A, N7) // Section Sign §
+ZMK_UNICODE_SINGLE(reg_sign,       N0, N0,  A,  E) // Registered Sign ®
+ZMK_UNICODE_SINGLE(copy_sign,      N0, N0,  A, N9) // Copyright Sign ©
+ZMK_UNICODE_SINGLE(ring_sign,      N0, N2,  D,  A) // Ring Above ˚
+ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
 
 &lt {
     quick-tap-ms = <200>;
@@ -105,10 +106,9 @@ ZMK_UNICODE_SINGLE(sqrt_sign,  N2, N2, N1,  A) // Square root √
                 &kp RBKT   &kp Q       &kp W       &kp E         &kp R             &kp T           &kp Y      &kp U                 &kp I         &kp O       &kp P               &kp LBKT
                 &kp GRAVE  &hr LGUI A  &hr LALT S  &hr LSHIFT D  &hr LCTRL F       &kp G           &kp H      &hr LCTRL J           &hr LSHIFT K  &hr LALT L  &hr LGUI SEMICOLON  &kp SQT
                 &kp MINUS  &kp Z       &kp X       &kp C         &kp V             &kp B           &kp N      &kp M                 &kp COMMA     &kp DOT     &kp FSLH            &kp BSLH
-                                                   &sl 2         &bmt LCTRL SPACE  &mt LWIN ENTER  &lt 4 TAB  &bmt RSHFT BACKSPACE  &lt 1 DEL
+                                                   &sl 2         &bmt LCTRL SPACE  &lt 5 ENTER     &lt 4 TAB  &bmt RSHFT BACKSPACE  &lt 1 DEL
             >;
         };
-
 
         NUMBER-LAYER {
             bindings = <
@@ -133,10 +133,9 @@ ZMK_UNICODE_SINGLE(sqrt_sign,  N2, N2, N1,  A) // Square root √
                 &bootloader  &none         &none         &none         &none         &to 0         &to 0         &none         &none         &none         &none         &bootloader
                 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
                 &sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
-                                                        &trans        &none         &trans        &none         &trans        &trans
+                                                         &trans        &none         &trans        &none         &trans        &trans
             >;
         };
-
 
         SPECIAL-LAYER {
             bindings = <
@@ -144,6 +143,15 @@ ZMK_UNICODE_SINGLE(sqrt_sign,  N2, N2, N1,  A) // Square root √
                 &trans  &el_alpha  &sect_sign  &ring_sign  &el_sigma   &el_gamma  &ruble_sign  &orthodox_cross  &trans  &laquo  &raquo  &trans
                 &trans  &el_mu     &el_prod    &copy_sign  &sqrt_sign  &el_beta   &el_eta      &hard_sign       &trans  &trans  &trans  &trans
                                                &trans      &kp RSHFT   &trans     &trans       &trans           &trans
+            >;
+        };
+
+        SYMBOL-LAYER {
+            bindings = <
+                &trans    &kp RBKT          &trans              &trans               &trans              &trans        &kp C_NEXT      &kp KP_NUM          &kp CLCK             &kp BSLH           &kp LBKT           &trans
+                &trans    &hr LGUI GRAVE    &hr LALT NUMBER_2   &hr LSHIFT NUMBER_3  &hr LCTRL ENTER     &trans        &kp C_PLAY      &hr LCTRL NUMBER_7  &hr LSHIFT NUMBER_8  &hr LALT NUMBER_9  &hr LGUI SQT       &trans
+                &trans    &kp MINUS         &kp PLUS            &kp EQUAL            &trans              &trans        &kp C_PREVIOUS  &trans              &trans               &trans             &kp BSLH           &trans
+                                                                &trans               &trans              &trans        &trans          &trans              &trans
             >;
         };
     };
