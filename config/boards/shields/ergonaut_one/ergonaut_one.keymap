@@ -103,55 +103,55 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
 
         DEFAULT-LAYER {
             bindings = <
-                &kp RBKT   &kp Q       &kp W       &kp E         &kp R             &kp T           &kp Y      &kp U                 &kp I         &kp O       &kp P               &kp LBKT
-                &kp GRAVE  &hr LGUI A  &hr LALT S  &hr LSHIFT D  &hr LCTRL F       &kp G           &kp H      &hr LCTRL J           &hr LSHIFT K  &hr LALT L  &hr LGUI SEMICOLON  &kp SQT
-                &kp MINUS  &kp Z       &kp X       &kp C         &kp V             &kp B           &kp N      &kp M                 &kp COMMA     &kp DOT     &kp FSLH            &kp BSLH
-                                                   &sl 2         &bmt LCTRL SPACE  &lt 5 ENTER     &lt 4 TAB  &bmt RSHFT BACKSPACE  &lt 1 DEL
+                &none     &kp Q       &kp W       &kp E         &kp R             &kp T           &kp Y      &kp U                 &kp I         &kp O       &kp P               &none
+                &none     &hr LGUI A  &hr LALT S  &hr LSHIFT D  &hr LCTRL F       &kp G           &kp H      &hr LCTRL J           &hr LSHIFT K  &hr LALT L  &hr LGUI SEMICOLON  &none
+                &none     &kp Z       &kp X       &kp C         &kp V             &kp B           &kp N      &kp M                 &kp COMMA     &kp DOT     &kp FSLH            &none
+                                                  &sl 2         &bmt LCTRL SPACE  &lt 5 ENTER     &lt 4 TAB  &bmt RSHFT BACKSPACE  &lt 1 DEL
             >;
         };
 
         NUMBER-LAYER {
             bindings = <
-                &kp F1     &kp F2             &kp F3             &kp F4               &kp F5              &kp F6        &kp F7        &kp F8              &kp F9               &kp F10            &kp F11            &kp F12
-                &kp PLUS   &hr LGUI NUMBER_1  &hr LALT NUMBER_2  &hr LSHIFT NUMBER_3  &hr LCTRL NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hr LCTRL NUMBER_7  &hr LSHIFT NUMBER_8  &hr LALT NUMBER_9  &hr LGUI NUMBER_0  &kp MINUS
-                &kp EQUAL  &kp EXCL           &kp AT             &kp HASH             &kp DLLR            &kp PRCNT     &kp CARET     &kp AMPS            &kp STAR             &kp LPAR           &kp RPAR           &kp RALT
+                &kp F1     &kp F2             &kp F3             &kp F4               &kp F5              &kp F6        &kp F7        &kp F8              &kp F9               &kp F10            &kp F11           &kp F12
+                &none     &hr LGUI NUMBER_1  &hr LALT NUMBER_2  &hr LSHIFT NUMBER_3  &hr LCTRL NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hr LCTRL NUMBER_7  &hr LSHIFT NUMBER_8  &hr LALT NUMBER_9  &hr LGUI NUMBER_0  &none
+                &none     &kp EXCL           &kp AT             &kp HASH             &kp DLLR            &kp PRCNT     &kp CARET     &kp AMPS            &kp STAR             &kp LPAR           &kp RPAR           &none
                                                                  &trans               &trans              &trans        &trans        &trans              &trans
             >;
         };
 
         FN-LAYER {
             bindings = <
-                &kp KP_NUM  &kp KP_SLASH            &kp KP_N7         &kp KP_N8         &kp KP_N9           &kp KP_MINUS     &kp C_VOL_UP     &kp HOME    &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CLCK
-                &kp EQUAL   &hr LGUI KP_MULTIPLY    &hr LALT KP_N4    &hr LSHIFT KP_N5  &hr LCTRL KP_N6     &kp KP_PLUS      &kp C_MUTE       &kp LEFT    &kp UP     &kp RIGHT  &kp INS          &kp K_APP
-                &kp LALT    &kp KP_N0               &kp KP_N1         &kp KP_N2         &kp KP_N3           &kp KP_DOT       &kp C_VOL_DN     &kp END     &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &kp RALT
-                                                                      &trans            &trans              &trans           &trans           &trans      &trans
+                &none      &kp KP_SLASH            &kp KP_N7         &kp KP_N8         &kp KP_N9           &kp KP_MINUS     &kp C_VOL_UP     &kp HOME    &kp PSCRN  &kp PG_UP  &kp SLCK         &none
+                &none      &hr LGUI KP_MULTIPLY    &hr LALT KP_N4    &hr LSHIFT KP_N5  &hr LCTRL KP_N6     &kp KP_PLUS      &kp C_MUTE       &kp LEFT    &kp UP     &kp RIGHT  &kp INS          &none
+                &none      &kp KP_N0               &kp KP_N1         &kp KP_N2         &kp KP_N3           &kp KP_DOT       &kp C_VOL_DN     &kp END     &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &none
+                                                                     &trans            &trans              &trans           &trans           &trans      &trans
             >;
         };
 
         SETTING-LAYER {
             bindings = <
-                &bootloader  &none         &none         &none         &none         &to 0         &to 0         &none         &none         &none         &none         &bootloader
-                &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-                &sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
-                                                         &trans        &none         &trans        &none         &trans        &trans
+                &none   &bootloader        &none         &none         &none         &to 0         &to 0         &none         &none         &none         &bootloader   &none
+                &none   &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
+                &none   &bt BT_CLR         &sys_reset    &none         &none         &none         &none         &none         &none         &sys_reset    &bt BT_CLR    &none
+                                                         &trans        &trans        &trans        &trans         &trans        &trans
             >;
         };
 
         SPECIAL-LAYER {
             bindings = <
-                &trans  &el_psi    &el_omega   &euro_sign  &reg_sign   &io        &yen_sign    &el_lambda       &shcha  &trans  &trans  &trans
-                &trans  &el_alpha  &sect_sign  &ring_sign  &el_sigma   &el_gamma  &ruble_sign  &orthodox_cross  &trans  &laquo  &raquo  &trans
-                &trans  &el_mu     &el_prod    &copy_sign  &sqrt_sign  &el_beta   &el_eta      &hard_sign       &trans  &trans  &trans  &trans
-                                               &trans      &kp RSHFT   &trans     &trans       &trans           &trans
+                &none  &el_psi    &el_omega   &euro_sign  &reg_sign   &io        &yen_sign    &el_lambda       &shcha  &trans  &trans  &none
+                &none  &el_alpha  &sect_sign  &ring_sign  &el_sigma   &el_gamma  &ruble_sign  &orthodox_cross  &trans  &laquo  &raquo  &none
+                &none  &el_mu     &el_prod    &copy_sign  &sqrt_sign  &el_beta   &el_eta      &hard_sign       &trans  &trans  &trans  &none
+                                              &trans      &kp RSHFT   &trans     &trans       &trans           &trans
             >;
         };
 
         SYMBOL-LAYER {
             bindings = <
-                &trans    &kp RBKT          &trans              &trans               &trans              &trans        &kp C_NEXT      &kp KP_NUM          &kp CLCK             &kp BSLH           &kp LBKT           &trans
-                &trans    &hr LGUI GRAVE    &hr LALT NUMBER_2   &hr LSHIFT NUMBER_3  &hr LCTRL ENTER     &trans        &kp C_PLAY      &hr LCTRL NUMBER_7  &hr LSHIFT NUMBER_8  &hr LALT NUMBER_9  &hr LGUI SQT       &trans
-                &trans    &kp MINUS         &kp PLUS            &kp EQUAL            &trans              &trans        &kp C_PREVIOUS  &trans              &trans               &trans             &kp BSLH           &trans
-                                                                &trans               &trans              &trans        &trans          &trans              &trans
+                &none    &kp RBKT          &none               &none                &none               &none         &kp C_NEXT      &kp CLCK         &none             &none              &kp LBKT           &none
+                &none    &kp GRAVE         &none               &none                &none               &none         &kp C_PLAY      &none            &none             &none              &kp SQT            &none
+                &none    &kp MINUS         &kp PLUS            &kp EQUAL            &none               &none         &kp C_PREVIOUS  &none            &none             &kp KP_NUM         &kp BSLH           &none
+                                                               &trans               &trans              &trans        &trans          &trans           &trans
             >;
         };
     };
