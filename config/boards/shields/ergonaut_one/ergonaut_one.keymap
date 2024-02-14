@@ -7,8 +7,9 @@
 
 #define DEF 0
 #define LWR 1
-#define RSE 2
-#define ADJ 3
+#define FNL 2
+#define STL 3
+#define UCL 4
 #define SYM 5
 #define GML 6
 #define AGL 7
@@ -53,12 +54,12 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
         compatible = "zmk,combos";
 
         ToMain {
-            bindings = <&to 0>;
+            bindings = <&to DEF>;
             key-positions = <1 2 3 4>;
         };
 
         ToGameMode {
-            bindings = <&to 6>;
+            bindings = <&to GML>;
             key-positions = <16 15>;
         };
         
@@ -78,7 +79,7 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
         };
 
         SystemLayout {
-            bindings = <&tog 3>;
+            bindings = <&to STL>;
             key-positions = <15 16 19 20>;
         };
     };
@@ -110,16 +111,16 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
 
         DEFAULT-LAYER {
             bindings = <
-                &none     &kp Q       &kp W       &kp E         &kp R             &kp T           &kp Y      &kp U                 &kp I         &kp O       &kp P               &none
-                &none     &hr LGUI A  &hr LALT S  &hr LSHIFT D  &hr LCTRL F       &kp G           &kp H      &hr LCTRL J           &hr LSHIFT K  &hr LALT L  &hr LGUI SEMICOLON  &none
-                &none     &kp Z       &kp X       &kp C         &kp V             &kp B           &kp N      &kp M                 &kp COMMA     &kp DOT     &kp FSLH            &none
-                                                  &sl 2         &bmt LCTRL SPACE  &lt 5 ENTER     &lt 4 TAB  &bmt RSHFT BACKSPACE  &lt 1 DEL
+                &none     &kp Q       &kp W       &kp E         &kp R             &kp T           &kp Y        &kp U                 &kp I         &kp O       &kp P               &none
+                &none     &hr LGUI A  &hr LALT S  &hr LSHIFT D  &hr LCTRL F       &kp G           &kp H        &hr LCTRL J           &hr LSHIFT K  &hr LALT L  &hr LGUI SEMICOLON  &none
+                &none     &kp Z       &kp X       &kp C         &kp V             &kp B           &kp N        &kp M                 &kp COMMA     &kp DOT     &kp FSLH            &none
+                                                  &sl FNL       &bmt LCTRL SPACE  &lt SYM ENTER   &lt UCL TAB  &bmt RSHFT BACKSPACE  &lt 1 DEL
             >;
         };
 
         NUMBER-LAYER {
             bindings = <
-                &kp F1    &kp F2             &kp F3             &kp F4               &kp F5              &kp F6        &kp F7        &kp F8              &kp F9               &kp F10            &kp F11            &kp F12
+                &none     &kp F1             &kp F2             &kp F3               &kp F4              &kp F5        &kp F6        &kp F7              &kp F8               &kp F9             &kp F10            &none
                 &none     &hr LGUI NUMBER_1  &hr LALT NUMBER_2  &hr LSHIFT NUMBER_3  &hr LCTRL NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hr LCTRL NUMBER_7  &hr LSHIFT NUMBER_8  &hr LALT NUMBER_9  &hr LGUI NUMBER_0  &none
                 &none     &kp EXCL           &kp AT             &kp HASH             &kp DLLR            &kp PRCNT     &kp CARET     &kp AMPS            &kp STAR             &kp LPAR           &kp RPAR           &none
                                                                 &trans               &trans              &trans        &trans        &trans              &trans
@@ -128,19 +129,19 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
 
         FN-LAYER {
             bindings = <
-                &none      &kp KP_SLASH            &kp KP_N7         &kp KP_N8         &kp KP_N9           &kp KP_MINUS     &kp C_VOL_UP     &kp HOME    &kp PSCRN  &kp PG_UP  &kp SLCK         &none
-                &none      &hr LGUI KP_MULTIPLY    &hr LALT KP_N4    &hr LSHIFT KP_N5  &hr LCTRL KP_N6     &kp KP_PLUS      &kp C_MUTE       &kp LEFT    &kp UP     &kp RIGHT  &kp INS          &none
-                &none      &kp KP_N0               &kp KP_N1         &kp KP_N2         &kp KP_N3           &kp KP_DOT       &kp C_VOL_DN     &kp END     &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &none
+                &none      &kp KP_SLASH            &kp KP_N7         &kp KP_N8         &kp KP_N9           &kp KP_MINUS     &kp CLCK         &kp HOME    &kp PSCRN  &kp PG_UP  &kp SLCK         &none
+                &none      &hr LGUI KP_MULTIPLY    &hr LALT KP_N4    &hr LSHIFT KP_N5  &hr LCTRL KP_N6     &kp KP_PLUS      &kp KP_NUM       &kp LEFT    &kp UP     &kp RIGHT  &kp INS          &none
+                &none      &kp KP_N0               &kp KP_N1         &kp KP_N2         &kp KP_N3           &kp KP_DOT       &none            &kp END     &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &none
                                                                      &trans            &trans              &trans           &trans           &trans      &trans
             >;
         };
 
         SETTING-LAYER {
             bindings = <
-                &none   &bootloader        &none         &none         &none         &to 0         &to 0         &none         &none         &none         &bootloader   &none
+                &none   &bootloader        &none         &none         &none         &none         &none         &none         &none         &none         &bootloader   &none
                 &none   &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
                 &none   &bt BT_CLR         &sys_reset    &none         &none         &none         &none         &none         &none         &sys_reset    &bt BT_CLR    &none
-                                                         &trans        &trans        &trans        &trans         &trans        &trans
+                                                         &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
@@ -155,10 +156,10 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
 
         SYMBOL-LAYER {
             bindings = <
-                &none    &kp RBKT          &none               &none                &none               &none         &kp C_NEXT      &kp CLCK         &none             &none              &kp LBKT           &none
-                &none    &kp GRAVE         &none               &none                &none               &none         &kp C_PLAY      &none            &none             &none              &kp SQT            &none
-                &none    &kp MINUS         &kp PLUS            &kp EQUAL            &none               &none         &kp C_PREVIOUS  &none            &none             &kp KP_NUM         &kp BSLH           &none
-                                                               &trans               &trans              &trans        &trans          &trans           &trans
+                &none    &kp RBKT          &none               &none                &none               &none         &kp C_NEXT        &kp C_VOL_UP     &none             &none              &kp LBKT           &none
+                &none    &kp GRAVE         &none               &none                &none               &none         &kp C_PLAY        &kp C_MUTE       &none             &none              &kp SQT            &none
+                &none    &kp MINUS         &kp PLUS            &kp EQUAL            &kp SPACE           &kp ENTER     &kp C_PREVIOUS    &kp C_VOL_DN     &none             &none              &kp BSLH           &none
+                                                               &trans               &trans              &trans        &trans            &trans           &trans
             >;
         };
 
@@ -167,7 +168,7 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
                 &none     &kp Q       &kp W       &kp E         &kp R         &kp T           &kp Y        &kp U                 &kp I         &kp O       &kp P               &none
                 &none     &kp A       &kp S       &kp D         &kp F         &kp G           &kp H        &hr LCTRL J           &hr LSHIFT K  &hr LALT L  &hr LGUI SEMICOLON  &none
                 &none     &kp Z       &kp X       &kp C         &kp V         &kp B           &kp N        &kp M                 &kp COMMA     &kp DOT     &kp FSLH            &none
-                                                  &sl 7         &kp LALT      &lt 5 SPACE     &kp ENTER    &bmt RSHFT BACKSPACE  &kp ESCAPE
+                                                  &sl AGL       &kp LALT      &lt SYM SPACE   &kp ENTER    &bmt RSHFT BACKSPACE  &kp ESCAPE
             >;
         };
 
