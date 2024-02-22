@@ -48,6 +48,11 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
             if-layers = <1 2>;
             then-layer = <3>;
         };
+
+        tri-alt-layer {
+            if-layers = <4 7>;
+            then-layer = <3>;
+        };
     };
 
     combos {
@@ -57,6 +62,12 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
             bindings = <&to DEF>;
             key-positions = <1 2 3 4>;
         };
+
+        SystemLayoutAlt {
+            bindings = <&to STL>;
+            key-positions = <7 8 9 10>;
+        };
+
 
         ToGameMode {
             bindings = <&to GML>;
