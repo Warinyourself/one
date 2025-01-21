@@ -2,39 +2,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// TODO: удалить слой UCL
-// Найти способ переходить на программный слой
-// TODO: переработать ADL слой
-#include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/international_chars/greek.dtsi"
-#include "../zmk-nodefree-config/international_chars/french.dtsi"
-
 #define DEF 0
 #define LWR 1
 #define FNL 2
-#define UCL 3
-#define GML 4
-#define AGL 5
-#define ADL 6
-#define STL 7
-
-ZMK_UNICODE_SINGLE(el_prod,        N0, N0,  D, N7) // ×
-ZMK_UNICODE_SINGLE(dotdotdot,      N2, N0, N2, N6) // …
-ZMK_UNICODE_PAIR(hard_sign,        N0, N4, N4,  A,  N0, N4, N2,  A) // Cyrillic Small Letter Hard Sign ъ
-ZMK_UNICODE_PAIR(io,               N0, N4, N5, N1,  N0, N4, N0, N1) // Cyrillic Small Letter Io ё
-ZMK_UNICODE_PAIR(shcha,            N0, N4, N4, N9,  N0, N4, N2, N9) // Cyrillic Capital Letter Shcha щ
-ZMK_UNICODE_SINGLE(orthodox_cross, N2, N6, N2, N6) // Orthodox Cross ☦
-ZMK_UNICODE_SINGLE(laquo,          N0, N0,  A,  B) // Left-Pointing Double Angle Quotation Mark «
-ZMK_UNICODE_SINGLE(raquo,          N0, N0,  B,  B) // Right-Pointing Double Angle Quotation Mark »
-ZMK_UNICODE_SINGLE(ruble_sign,     N2, N0,  B,  D) // Russian Ruble ₽
-ZMK_UNICODE_SINGLE(yen_sign,       N0, N0,  A, N5) // Yen Sign ¥
-ZMK_UNICODE_SINGLE(pound_sign,     N0, N0,  A, N3) // Pound Sign £
-ZMK_UNICODE_SINGLE(euro_sign,      N0, N0,  E, N9) // Euro €
-ZMK_UNICODE_SINGLE(sect_sign,      N0, N0,  A, N7) // Section Sign §
-ZMK_UNICODE_SINGLE(reg_sign,       N0, N0,  A,  E) // Registered Sign ®
-ZMK_UNICODE_SINGLE(copy_sign,      N0, N0,  A, N9) // Copyright Sign ©
-ZMK_UNICODE_SINGLE(ring_sign,      N0, N2,  D,  A) // Ring Above ˚
-ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
+#define GML 3
+#define AGL 4
+#define ADL 5
+#define STL 6
 
 &lt {
     quick-tap-ms = <200>;
@@ -144,15 +118,6 @@ ZMK_UNICODE_SINGLE(sqrt_sign,      N2, N2, N1,  A) // Square root √
                 &none      &hr LGUI KP_MULTIPLY    &hr LALT KP_N4    &hr LSHIFT KP_N5  &hr LCTRL KP_N6     &kp KP_PLUS      &kp KP_NUM       &kp LEFT    &kp UP     &kp RIGHT  &kp INS          &none
                 &none      &kp KP_N0               &kp KP_N1         &kp KP_N2         &kp KP_N3           &kp KP_DOT       &none            &kp END     &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &none
                                                                      &trans            &trans              &trans           &trans           &trans      &trans
-            >;
-        };
-
-        SPECIAL-LAYER {
-            bindings = <
-                &none  &el_psi    &el_omega   &euro_sign  &reg_sign   &io        &yen_sign    &el_lambda       &shcha  &trans  &trans  &none
-                &none  &el_alpha  &sect_sign  &ring_sign  &el_sigma   &el_gamma  &ruble_sign  &orthodox_cross  &trans  &laquo  &raquo  &none
-                &none  &el_mu     &el_prod    &copy_sign  &sqrt_sign  &el_beta   &el_eta      &hard_sign       &trans  &trans  &trans  &none
-                                              &trans      &kp RSHFT   &trans     &trans       &trans           &trans
             >;
         };
 
