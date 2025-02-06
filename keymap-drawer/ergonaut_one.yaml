@@ -87,11 +87,11 @@ layers:
   - {type: held}
   NUM:
   - ''
-  - KP SLASH
+  - ''
   - KP 7
   - KP 8
   - KP 9
-  - KP MINUS
+  - ''
   - CLCK
   - Home
   - Print Scrn
@@ -103,7 +103,7 @@ layers:
   - {t: KP 4, h: Alt}
   - {t: KP 5, h: LSHIFT}
   - {t: KP 6, h: Ctrl}
-  - KP PLUS
+  - ''
   - KP NUM
   - ←
   - ↑
@@ -115,7 +115,7 @@ layers:
   - KP 1
   - KP 2
   - KP 3
-  - KP DOT
+  - {t: ▽, type: trans}
   - ''
   - End
   - ↓
