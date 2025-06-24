@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: ergonaut_one}
 layers:
   MAIN:
   - ''
@@ -135,7 +136,7 @@ layers:
   - W
   - E
   - R
-  - ''
+  - MUTE
   - ''
   - ↑
   - ''

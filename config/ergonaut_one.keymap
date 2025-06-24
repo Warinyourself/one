@@ -124,10 +124,10 @@
         GAME-LAYER {
             display-name = "GAME";
             bindings = <
-&none  &kp TAB     &kp Q  &kp W    &kp E      &kp R    &none   &none      &kp UP    &none      &kp TAB     &none
-&none  &kp LSHIFT  &kp A  &kp S    &kp D      &kp F    &none   &kp LEFT   &kp DOWN  &kp RIGHT  &kp LSHIFT  &none
-&none  &kp LCTRL   &kp Z  &kp X    &kp C      &kp V    &none   &none      &none     &none      &kp LCTRL   &none
-                          &sl AGL  &kp SPACE  &sl ADL  &trans  &kp SPACE  &kp LGUI
+&none  &kp TAB     &kp Q  &kp W    &kp E      &kp R    &kp K_MUTE  &none      &kp UP    &none      &kp TAB     &none
+&none  &kp LSHIFT  &kp A  &kp S    &kp D      &kp F    &none       &kp LEFT   &kp DOWN  &kp RIGHT  &kp LSHIFT  &none
+&none  &kp LCTRL   &kp Z  &kp X    &kp C      &kp V    &none       &none      &none     &none      &kp LCTRL   &none
+                          &sl AGL  &kp SPACE  &sl ADL  &trans      &kp SPACE  &kp LGUI
             >;
         };
 
