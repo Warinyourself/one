@@ -144,10 +144,10 @@
         ADDITIONAL-LAYER {
             display-name = "ADDITIONAL";
             bindings = <
-&none  &kp RBKT      &kp LGUI         &kp LSHIFT   &kp LCTRL  &kp TAB         &kp C_NEXT      &kp C_VOL_UP  &none   &none  &kp LBKT  &none
-&none  &kp GRAVE     &kp LS(LC(TAB))  &kp LC(TAB)  &kp ENTER  &kp ESCAPE      &kp C_PLAY      &kp C_MUTE    &none   &none  &kp SQT   &none
-&none  &kp KP_MINUS  &kp KP_PLUS      &kp EQUAL    &kp SPACE  &kp UNDERSCORE  &kp C_PREVIOUS  &kp C_VOL_DN  &none   &none  &kp BSLH  &none
-                                      &trans       &trans     &trans          &trans          &trans        &trans
+&none  &kp RBKT   &kp LGUI         &kp LSHIFT   &kp LCTRL  &kp TAB         &kp C_NEXT      &kp C_VOL_UP  &none   &none  &kp LBKT  &none
+&none  &kp GRAVE  &kp LS(LC(TAB))  &kp LC(TAB)  &kp ENTER  &kp ESCAPE      &kp C_PLAY      &kp C_MUTE    &none   &none  &kp SQT   &none
+&none  &kp MINUS  &kp KP_PLUS      &kp EQUAL    &kp SPACE  &kp UNDERSCORE  &kp C_PREVIOUS  &kp C_VOL_DN  &none   &none  &kp BSLH  &none
+                                   &trans       &trans     &trans          &trans          &trans        &trans
             >;
         };
 
