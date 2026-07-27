@@ -75,17 +75,6 @@
             quick-tap-ms = <300>;
             bindings = <&kp>, <&kp>;
         };
-
-        /**
-         *  Alt for game mode.
-         */
-
-        alt_gm: tap_dance_mod_tap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LALT>, <&kp LCTRL>;
-        };
     };
 
     keymap {
@@ -102,7 +91,7 @@
         };
 
         NUMBER-LAYER {
-            display-name = "SYM";
+            display-name = "NUM";
             bindings = <
 &none  &kp F1             &kp F2             &kp F3               &kp F4              &kp F5        &kp F6        &kp F7              &kp F8               &kp F9             &kp F10            &none
 &none  &hr LGUI NUMBER_1  &hr LALT NUMBER_2  &hr LSHIFT NUMBER_3  &hr LCTRL NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &hr LCTRL NUMBER_7  &hr LSHIFT NUMBER_8  &hr LALT NUMBER_9  &hr LGUI NUMBER_0  &none
@@ -112,7 +101,7 @@
         };
 
         FN-LAYER {
-            display-name = "NUM";
+            display-name = "FNL";
             bindings = <
 &none  &none                 &kp KP_N7       &kp KP_N8         &kp KP_N9        &none   &kp CLCK    &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &none
 &none  &hr LGUI KP_MULTIPLY  &hr LALT KP_N4  &hr LSHIFT KP_N5  &hr LCTRL KP_N6  &none   &kp KP_NUM  &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &none

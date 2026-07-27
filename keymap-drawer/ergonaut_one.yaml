@@ -37,13 +37,13 @@ layers:
   - .
   - /
   - ''
-  - {t: NUM, h: sticky}
+  - {t: FNL, h: sticky}
   - {t: ␣, h: Ctrl}
   - {t: ADDITIONAL, h: sticky}
   - ↹
   - {t: BACKSPACE, h: Shift}
-  - {t: ⌦, h: SYM}
-  SYM:
+  - {t: ⌦, h: NUM}
+  NUM:
   - ''
   - F1
   - F2
@@ -86,7 +86,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  NUM:
+  FNL:
   - ''
   - ''
   - KP 7
