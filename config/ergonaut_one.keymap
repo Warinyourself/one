@@ -18,7 +18,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        system-alt-layer {
+        system-alt-layer-dont-work {
             if-layers = <2 5>;
             then-layer = <6>;
         };
